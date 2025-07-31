@@ -127,7 +127,7 @@
   position: absolute;
   top: 0px;
   left: 0;
-  width: 57%;
+  width: 56%;
   z-index: 1;
   -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
   clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 20%);

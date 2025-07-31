@@ -12,7 +12,7 @@ export function AboutSection() {
               autoPlay
               muted
               loop
-              className="h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
 
