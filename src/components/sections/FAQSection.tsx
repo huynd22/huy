@@ -45,7 +45,9 @@ export function FAQSection() {
           FREQUENTLY ASKED QUESTIONS
         </h6>
         <div className="flex gap-12 mt-16 items-center">
-          <Image src={img1} alt="faq" className="w-2/5 h-auto scale-300" />
+          <div className="w-2/5 overflow-hidden">
+            <Image src={img1} alt="faq" className="w-full h-auto scale-300" />
+          </div>
 
           <Accordion type="single" collapsible className="flex-1 space-y-6">
             {faqs.map((q, i) => (
