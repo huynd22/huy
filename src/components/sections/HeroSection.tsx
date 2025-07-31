@@ -30,14 +30,14 @@ export function HeroSection() {
       </div>
       <div className="w-full max-w-[1100px] gap-8 flex justify-start items-center">
         <Button
-          variant="outline"
+          variant="default"
           onClick={() => {
             const contactSection = document.getElementById("about");
             if (contactSection) {
               contactSection.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="bg-[#F2E9E9] w-[212px] text-lg text-[#000000] h-[57px] border border-[#000000]"
+          className="w-[212px] text-lg h-[57px]"
         >
           Get Start
           <svg
@@ -49,7 +49,7 @@ export function HeroSection() {
           >
             <path
               d="M6.37764 0.602817L7.12086 0.145294C7.43555 -0.0484314 7.94443 -0.0484314 8.25578 0.145294L14.764 4.14965C15.0787 4.34337 15.0787 4.65663 14.764 4.84829L8.25578 8.85471C7.94108 9.04843 7.43221 9.04843 7.12086 8.85471L6.37764 8.39718C6.05959 8.2014 6.06629 7.88196 6.39103 7.69029L10.4252 5.32436H0.803482C0.358219 5.32436 0 5.10385 0 4.82975V4.17025C0 3.89615 0.358219 3.67564 0.803482 3.67564H10.4252L6.39103 1.30971C6.06294 1.11804 6.05624 0.798603 6.37764 0.602817Z"
-              fill="black"
+              fill="currentColor"
             />
           </svg>
         </Button>

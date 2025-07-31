@@ -13,10 +13,18 @@ export function Header() {
         </div>
       </div>
       <nav className="hidden sm:flex gap-10 text-lg grow-6 sm:justify-center">
-        <a href="#home">Home Page</a>
-        <a href="#about">About Us</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#home" className="hover:text-primary transition-colors">
+          Home Page
+        </a>
+        <a href="#about" className="hover:text-primary transition-colors">
+          About Us
+        </a>
+        <a href="#process" className="hover:text-primary transition-colors">
+          Process
+        </a>
+        <a href="#contact" className="hover:text-primary transition-colors">
+          Contact Us
+        </a>
       </nav>
       <div className="flex items-center gap-4 grow-2">
         <svg
@@ -39,14 +47,14 @@ export function Header() {
           </defs>
         </svg>
         <Button
-          variant="outline"
+          variant="default"
           onClick={() => {
             const contactSection = document.getElementById("contact");
             if (contactSection) {
               contactSection.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="bg-[#F2E9E9] w-[212px] text-lg text-[#000000] h-[57px] border border-[#000000]"
+          className="w-[212px] text-lg h-[57px]"
         >
           Contact Us
           <svg
@@ -58,7 +66,7 @@ export function Header() {
           >
             <path
               d="M16.8917 10.5469H2.14844C1.82485 10.5469 1.5625 10.8092 1.5625 11.1328V13.8672C1.5625 14.1908 1.82485 14.4531 2.14844 14.4531H16.8917V16.7021C16.8917 17.7462 18.1539 18.269 18.8922 17.5308L23.0943 13.3287C23.552 12.871 23.552 12.129 23.0943 11.6714L18.8922 7.4693C18.154 6.73106 16.8917 7.25392 16.8917 8.29796V10.5469Z"
-              fill="black"
+              fill="currentColor"
             />
           </svg>
         </Button>

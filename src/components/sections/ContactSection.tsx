@@ -10,11 +10,11 @@ export function ContactSection() {
     >
       <h6 className="text-[30px] mb-4 text-center">CONTACT TO WORK</h6>
       <div className="grid grid-cols-2 mt-4 w-full max-w-[750px] gap-4 mb-4">
-        <div className="flex h-[155px] flex-col justify-center items-center border border-[#000000] rounded-[27px] w-full">
+        <div className="flex h-[155px] flex-col justify-center items-center border-2 border-primary rounded-[27px] w-full">
           <div className="text-lg">Whatsapp</div>
           <div className="text-base font-lao-man">+84 947376225</div>
         </div>
-        <div className="flex h-[155px] flex-col justify-center items-center border border-[#000000] rounded-[27px] w-full">
+        <div className="flex h-[155px] flex-col justify-center items-center border-2 border-primary rounded-[27px] w-full">
           <div className="text-lg">Telegram</div>
           <Image
             src="/images/qr-code.png"
@@ -33,7 +33,7 @@ export function ContactSection() {
           <Input placeholder="Your Name" />
           <Input placeholder="Your Email" type="email" />
           <Textarea placeholder="Your Message" />
-          <Button type="submit" className="h-12 mt-4 mx-auto">
+          <Button type="submit" variant="default" className="h-12 mt-4 mx-auto">
             Send Message
           </Button>
         </form>

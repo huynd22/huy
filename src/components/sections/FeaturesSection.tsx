@@ -40,8 +40,12 @@ export function FeaturesSection() {
             key={i}
             className="flex-1 p-6 border-[3px] gap-4 rounded-[36px] border-[#F5F5F5] min-w-[180px]"
           >
-            <div className="w-[56px] h-[56px] border border-[#000000] bg-[#D9D9D9] rounded-full flex justify-center items-center">
-              <Image src={feat.image} alt={feat.title} />
+            <div className="w-[56px] h-[56px] border border-primary bg-primary rounded-full flex justify-center items-center">
+              <Image
+                src={feat.image}
+                alt={feat.title}
+                className="filter brightness-0 invert"
+              />
             </div>
             <p className="text-[#000000] text-lg h-11">{feat.title}</p>
             <div className="text-base text-[#000000] font-lao-man">

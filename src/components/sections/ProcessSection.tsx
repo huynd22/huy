@@ -22,7 +22,7 @@ export function ProcessSection() {
   return (
     <section className="py-30 bg-[#211B1B]" id="process">
       <div className="container mx-auto">
-        <h5 className="text-center w-fit mx-auto px-4 py-2 text-base text-black flex items-center gap-3.5 bg-[#D9D9D9] rounded-full font-semibold mb-4 uppercase tracking-wide">
+        <h5 className="text-center w-fit mx-auto px-4 py-2 text-base text-white flex items-center gap-3.5 bg-primary rounded-full font-semibold mb-4 uppercase tracking-wide">
           <svg
             width="30"
             height="30"
@@ -32,7 +32,7 @@ export function ProcessSection() {
           >
             <path
               d="M15 30C17.0696 30 18.7483 28.3213 18.7483 26.25H11.2518C11.2518 28.3213 12.9305 30 15 30ZM27.6205 21.2279C26.4885 20.0115 24.3704 18.1816 24.3704 12.1875C24.3704 7.63477 21.1782 3.99023 16.8739 3.09609V1.875C16.8739 0.839648 16.0348 0 15 0C13.9653 0 13.1262 0.839648 13.1262 1.875V3.09609C8.82192 3.99023 5.62973 7.63477 5.62973 12.1875C5.62973 18.1816 3.51156 20.0115 2.37953 21.2279C2.02797 21.6059 1.87211 22.0576 1.87504 22.5C1.88149 23.4609 2.63559 24.375 3.7559 24.375H26.2442C27.3645 24.375 28.1192 23.4609 28.125 22.5C28.128 22.0576 27.9721 21.6053 27.6205 21.2279Z"
-              fill="black"
+              fill="currentColor"
             />
           </svg>
           Working Process
@@ -55,7 +55,9 @@ export function ProcessSection() {
                 )}
               >
                 <div className="flex-1 text-left">
-                  <div className="font-semibold mb-1">Step {i + 1}</div>
+                  <div className="font-semibold rounded-[15px] border-[3px] border-primary w-fit px-3 py-2 mb-1 text-black">
+                    Step {i + 1}
+                  </div>
                   <div className="text-xl">{step.title}</div>
                   <div className="text-base font-lao-man mt-4">{step.desc}</div>
                 </div>
