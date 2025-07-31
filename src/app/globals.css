@@ -147,3 +147,15 @@
   -webkit-clip-path: polygon(70% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
   clip-path: polygon(70% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
 }
+
+.testimonial-inner {
+  max-width: 585px;
+  margin: 0 auto;
+}
+
+.imgborder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  @apply border-[3px] border-primary;
+}

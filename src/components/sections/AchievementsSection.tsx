@@ -20,7 +20,7 @@ export function AchievementsSection() {
         <div className="absolute inset-x-0 flex gap-30 bg-[#D9D9D9] px-12 py-6 rounded-[47px] bottom-0 translate-y-full">
           {achievements.map(({ big, desc }, i) => (
             <div key={i} className="flex flex-col gap-2">
-              <div className="text-[50px] text-black">{big}</div>
+              <div className="text-[50px] text-primary">{big}</div>
               <div className="text-[18px] text-black font-lao-man">{desc}</div>
             </div>
           ))}
