@@ -122,3 +122,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+.about-img1 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 57%;
+  z-index: 1;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 0 20%);
+  height: 100%;
+}
+
+.about-img2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 2;
+  -webkit-clip-path: polygon(70% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+  clip-path: polygon(70% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+}

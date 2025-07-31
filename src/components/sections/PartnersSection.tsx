@@ -2,7 +2,7 @@ import img1 from "@/public/images/partners/img-1.png";
 import img2 from "@/public/images/partners/img-2.png";
 import img3 from "@/public/images/partners/img-3.png";
 import img4 from "@/public/images/partners/img-4.png";
-import img5 from "@/public/images/partners/img-5.png";
+import img5 from "@/public/images/partners/img-5.webp";
 
 import Image from "next/image";
 const partners = [img1, img2, img3, img4, img5];

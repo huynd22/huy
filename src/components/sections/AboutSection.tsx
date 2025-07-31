@@ -1,4 +1,3 @@
-import img1 from "@/public/images/about/img-1.png";
 import img2 from "@/public/images/about/img-2.png";
 import img3 from "@/public/images/about/img-3.png";
 import Image from "next/image";
@@ -6,14 +5,31 @@ export function AboutSection() {
   return (
     <section className="py-30 container mx-auto" id="about">
       <div className="flex gap-6 items-stretch">
-        <div className="flex justify-center w-[45%] gap-7">
-          <Image src={img1} alt="About" className="flex-1 h-auto" />
-          <div className="flex flex-col gap-6 flex-1">
-            <Image src={img2} alt="About" className="w-full h-auto" />
-            <Image src={img3} alt="About" className="w-full h-auto" />
+        <div className="flex relative justify-center w-[45%] gap-7">
+          <div className="about-img1">
+            <video
+              src="/images/about/video-1.mp4"
+              autoPlay
+              muted
+              loop
+              className="h-full object-cover"
+            />
+          </div>
+
+          <div className="about-img2">
+            <Image
+              src={img2}
+              alt="About"
+              className="w-full h-[70%] object-cover"
+            />
+            <Image
+              src={img3}
+              alt="About"
+              className="w-full h-1/4 object-cover"
+            />
           </div>
         </div>
-        <div className="flex flex-col justify-between gap-2 flex-1">
+        <div className="flex flex-col gap-16 flex-1">
           <div>
             <h4 className="text-[30px] mb-6">ABOUT US</h4>
             <p className="font-lao-man border-l-4 pl-4 border-primary text-[16px]">
