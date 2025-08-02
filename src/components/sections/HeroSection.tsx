@@ -8,9 +8,13 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="bg-[#595353] min-h-screen pt-[100px] text-white px-4 py-12 flex flex-col items-center justify-around text-center"
+      className="relative min-h-screen pt-[100px] text-white py-12 flex flex-col items-center justify-around text-center"
     >
-      <div className="flex items-end justify-between w-full max-w-[1100px]">
+      <video autoPlay muted loop id="myVideo">
+        <source src="/videos/bg.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+      <div className="flex items-end relative justify-between w-full max-w-[1100px]">
         <div className="pb-24">
           <h1 className="text-2xl text-left md:text-[55px] mb-3 leading-[100px]">
             FACEBOOK ADS
@@ -26,9 +30,11 @@ export function HeroSection() {
           </p>
         </div>
 
-        <Image src={heroImage} alt="Hero Image" className="w-[418px] h-auto" />
+        <div />
+
+        {/* <Image src={heroImage} alt="Hero Image" className="w-[418px] h-auto" /> */}
       </div>
-      <div className="w-full max-w-[1100px] gap-8 flex justify-start items-center">
+      <div className="w-full relative max-w-[1100px] gap-8 flex justify-start items-center">
         <Button
           variant="default"
           onClick={() => {
