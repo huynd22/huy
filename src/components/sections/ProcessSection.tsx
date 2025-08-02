@@ -20,9 +20,9 @@ const steps = [
 ];
 export function ProcessSection() {
   return (
-    <section className="py-30 bg-[#211B1B]" id="process">
+    <section className="py-30 hero-gradient" id="process">
       <div className="container mx-auto">
-        <h5 className="text-center w-fit mx-auto px-4 py-2 text-base text-white flex items-center gap-3.5 bg-primary rounded-full font-semibold mb-4 uppercase tracking-wide">
+        <h5 className="text-center w-fit mx-auto px-6 py-3 text-base text-white flex items-center gap-3.5 bg-accent rounded-full font-semibold mb-6 uppercase tracking-wide shadow-lg">
           <svg
             width="30"
             height="30"
@@ -37,7 +37,7 @@ export function ProcessSection() {
           </svg>
           Working Process
         </h5>
-        <p className="text-[30px] text-white text-center mb-10">
+        <p className="text-2xl md:text-3xl text-white text-center mb-12 font-bold">
           WE COMPLETE OUR WORK TO FOLLOW SOME EASY WAY
         </p>
         <div className="flex flex-col gap-16">
@@ -51,15 +51,19 @@ export function ProcessSection() {
             >
               <div
                 className={cn(
-                  "flex-1 max-w-4xl flex flex-col mb-12 md:flex-row items-center gap-8 bg-[#D9D9D9] p-6 px-20 rounded-xl"
+                  "flex-1 max-w-4xl flex flex-col mb-12 md:flex-row items-center gap-8 card-gradient p-8 px-12 rounded-2xl shadow-xl"
                 )}
               >
                 <div className="flex-1 text-left">
-                  <div className="font-semibold rounded-[15px] border-[3px] border-primary w-fit px-3 py-2 mb-1 text-black">
+                  <div className="font-semibold rounded-xl border-2 border-primary bg-primary/10 w-fit px-4 py-2 mb-3 text-primary">
                     Step {i + 1}
                   </div>
-                  <div className="text-xl">{step.title}</div>
-                  <div className="text-base font-lao-man mt-4">{step.desc}</div>
+                  <div className="text-xl font-bold text-foreground mb-2">
+                    {step.title}
+                  </div>
+                  <div className="text-base font-lao-man text-muted-foreground leading-relaxed">
+                    {step.desc}
+                  </div>
                 </div>
                 <svg
                   width="172"
@@ -67,11 +71,12 @@ export function ProcessSection() {
                   viewBox="0 0 172 183"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="opacity-20"
                 >
                   <path
                     opacity="0.5"
                     d="M0 0H106.76L154.8 46.4654V83.1818H137.6V66.5455H86V16.6364H17.2V166.364H154.8V183H0V0ZM103.2 20.0801V49.9091H134.04L103.2 20.0801ZM43 91.5V158.045H25.8V91.5H43ZM47.3 108.136C47.3 103.724 49.1121 99.4926 52.3378 96.3727C55.5634 93.2528 59.9383 91.5 64.5 91.5H77.4V108.136H64.5V141.409H77.4V158.045H64.5C59.9383 158.045 55.5634 156.293 52.3378 153.173C49.1121 150.053 47.3 145.821 47.3 141.409V108.136ZM81.7 108.136C81.7 103.724 83.5121 99.4926 86.7378 96.3727C89.9634 93.2528 94.3383 91.5 98.9 91.5H107.5C112.062 91.5 116.437 93.2528 119.662 96.3727C122.888 99.4926 124.7 103.724 124.7 108.136V141.409C124.7 145.821 122.888 150.053 119.662 153.173C116.437 156.293 112.062 158.045 107.5 158.045H98.9C94.3383 158.045 89.9634 156.293 86.7378 153.173C83.5121 150.053 81.7 145.821 81.7 141.409V108.136ZM129 91.5H154.8C159.362 91.5 163.737 93.2528 166.962 96.3727C170.188 99.4926 172 103.724 172 108.136V158.045H154.8V108.136H146.2V158.045H129V91.5ZM98.9 108.136V141.409H107.5V108.136H98.9Z"
-                    fill="black"
+                    fill="currentColor"
                   />
                 </svg>
               </div>
@@ -83,6 +88,7 @@ export function ProcessSection() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
+                  className="opacity-30"
                 >
                   <rect
                     y="100.221"
@@ -120,6 +126,7 @@ export function ProcessSection() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
+                  className="opacity-30"
                 >
                   <rect
                     width="115.656"

@@ -13,7 +13,7 @@ import {
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full bg-background text-foreground">
+    <div className="min-h-screen w-full text-foreground">
       <Header />
       <HeroSection />
       <FeaturesSection />

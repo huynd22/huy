@@ -8,22 +8,22 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-[100px] text-white py-12 flex flex-col items-center justify-around text-center"
+      className="relative min-h-screen pt-[100px] text-white py-12 flex flex-col items-center justify-around text-center hero-gradient"
     >
       <video autoPlay muted loop id="myVideo">
         <source src="/videos/bg.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
-      <div className="flex items-end relative justify-between w-full max-w-[1100px]">
+      <div className="flex items-end relative justify-between w-full max-w-[1100px] z-10">
         <div className="pb-24">
-          <h1 className="text-2xl text-left md:text-[55px] mb-3 leading-[100px]">
+          <h1 className="text-2xl text-left md:text-[55px] mb-6 leading-[1.1] font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             FACEBOOK ADS
             <br />
-            ACCOUNT RENTAL
+            <span className="text-accent">ACCOUNT RENTAL</span>
             <br />
             SERVICE PROVIDER
           </h1>
-          <p className="mb-5 text-lg text-left font-lao-man">
+          <p className="mb-8 text-lg text-left font-lao-man text-blue-100 max-w-2xl leading-relaxed">
             We provide high-quality accounts – the key to pushing your <br />
             campaign beyond limits and delivering top performance
             <br />
@@ -34,7 +34,7 @@ export function HeroSection() {
 
         {/* <Image src={heroImage} alt="Hero Image" className="w-[418px] h-auto" /> */}
       </div>
-      <div className="w-full relative max-w-[1100px] gap-8 flex justify-start items-center">
+      <div className="w-full relative max-w-[1100px] gap-8 flex justify-start items-center z-10">
         <Button
           variant="default"
           onClick={() => {
@@ -43,12 +43,12 @@ export function HeroSection() {
               contactSection.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="w-[212px] text-lg h-[57px]"
+          className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 h-14 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
         >
-          Get Start
+          Get Started
           <svg
-            width="15"
-            height="9"
+            width="18"
+            height="12"
             viewBox="0 0 15 9"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export function HeroSection() {
             <div
               key={index}
               className={cn(
-                "w-[56px] h-[56px] border border-[#000000] bg-[#D9D9D9] rounded-full flex justify-center items-center",
+                "w-[56px] h-[56px] border-2 border-white/20 bg-white/10 backdrop-blur-sm rounded-full flex justify-center items-center shadow-lg",
                 index !== 0 && "-ml-6"
               )}
             >
@@ -78,14 +78,16 @@ export function HeroSection() {
               >
                 <path
                   d="M22.6562 18.875H2.34375C1.04932 18.875 0 17.8257 0 16.5312V2.46875C0 1.17432 1.04932 0.125 2.34375 0.125H22.6562C23.9507 0.125 25 1.17432 25 2.46875V16.5312C25 17.8257 23.9507 18.875 22.6562 18.875ZM5.46875 2.85938C3.95859 2.85938 2.73438 4.08359 2.73438 5.59375C2.73438 7.10391 3.95859 8.32812 5.46875 8.32812C6.97891 8.32812 8.20312 7.10391 8.20312 5.59375C8.20312 4.08359 6.97891 2.85938 5.46875 2.85938ZM3.125 15.75H21.875V10.2812L17.6018 6.00806C17.373 5.77925 17.002 5.77925 16.7731 6.00806L10.1562 12.625L7.44556 9.91431C7.21675 9.6855 6.84575 9.6855 6.61689 9.91431L3.125 13.4062V15.75Z"
-                  fill="black"
+                  fill="white"
                 />
               </svg>
             </div>
           ))}
         </div>
 
-        <span className="text-lg">20k+ worldwide customers</span>
+        <span className="text-lg text-blue-100 font-medium">
+          20k+ worldwide customers
+        </span>
       </div>
     </section>
   );
