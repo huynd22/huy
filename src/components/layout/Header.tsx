@@ -1,16 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
-import logo from "@/public/images/logo.png";
 
 export function Header() {
   return (
     <header className="fixed top-0 z-50 inset-x-0 w-full backdrop-blur-md bg-white/90 border-b border-border/50 px-4 sm:px-16 py-4 flex items-center justify-between shadow-sm">
       <div className="flex items-center gap-2 grow-2">
         <div className="flex items-center gap-3">
-          <div className="p-2 bg-primary/10 rounded-xl">
-            <Image src={logo} alt="logo" className="w-[48px] h-auto" />
-          </div>
           <span className="tracking-tight text-xl font-semibold text-foreground">
             Golden Agency
           </span>
