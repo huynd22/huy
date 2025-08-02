@@ -1,21 +1,29 @@
 import { cn } from "@/lib/utils";
-
+import img1 from "@/public/images/process/img-1.png";
+import img2 from "@/public/images/process/img-2.png";
+import img3 from "@/public/images/process/img-3.png";
+import img4 from "@/public/images/process/img-4.png";
+import Image from "next/image";
 const steps = [
   {
     title: "Obtain customer information",
     desc: "Our staff will ask about your account requirements, including the products you want to promote, the currency and time zone, and more.",
+    image: img1,
   },
   {
     title: "Provide account",
     desc: "Provide for customer some innitial materials such as vps/adspower/gologin (clean proxy), strong profile, strong fanpage, strong account.",
+    image: img2,
   },
   {
     title: "Run free test",
     desc: "Customer have time for free testing account.",
+    image: img3,
   },
   {
     title: "Payment",
     desc: "After the test is successful and the customer wants to spend more, they top up their account with us. ",
+    image: img4,
   },
 ];
 export function ProcessSection() {
@@ -65,20 +73,11 @@ export function ProcessSection() {
                     {step.desc}
                   </div>
                 </div>
-                <svg
-                  width="172"
-                  height="183"
-                  viewBox="0 0 172 183"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="opacity-20"
-                >
-                  <path
-                    opacity="0.5"
-                    d="M0 0H106.76L154.8 46.4654V83.1818H137.6V66.5455H86V16.6364H17.2V166.364H154.8V183H0V0ZM103.2 20.0801V49.9091H134.04L103.2 20.0801ZM43 91.5V158.045H25.8V91.5H43ZM47.3 108.136C47.3 103.724 49.1121 99.4926 52.3378 96.3727C55.5634 93.2528 59.9383 91.5 64.5 91.5H77.4V108.136H64.5V141.409H77.4V158.045H64.5C59.9383 158.045 55.5634 156.293 52.3378 153.173C49.1121 150.053 47.3 145.821 47.3 141.409V108.136ZM81.7 108.136C81.7 103.724 83.5121 99.4926 86.7378 96.3727C89.9634 93.2528 94.3383 91.5 98.9 91.5H107.5C112.062 91.5 116.437 93.2528 119.662 96.3727C122.888 99.4926 124.7 103.724 124.7 108.136V141.409C124.7 145.821 122.888 150.053 119.662 153.173C116.437 156.293 112.062 158.045 107.5 158.045H98.9C94.3383 158.045 89.9634 156.293 86.7378 153.173C83.5121 150.053 81.7 145.821 81.7 141.409V108.136ZM129 91.5H154.8C159.362 91.5 163.737 93.2528 166.962 96.3727C170.188 99.4926 172 103.724 172 108.136V158.045H154.8V108.136H146.2V158.045H129V91.5ZM98.9 108.136V141.409H107.5V108.136H98.9Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  className="w-48 h-auto"
+                />
               </div>
               {i === 3 ? null : i % 2 === 1 ? (
                 <svg
