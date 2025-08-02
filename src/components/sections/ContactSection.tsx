@@ -37,20 +37,16 @@ export function ContactSection() {
             Send Message
           </Button>
         </form>
-        <div className="flex-1 rounded-[36px] flex items-center justify-center bg-[#D9D9D9]">
-          <svg
-            width="411"
-            height="322"
-            viewBox="0 0 411 322"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.5"
-              d="M372.469 321.994H38.5312C17.2508 321.994 0 303.974 0 281.744V40.2492C0 18.0199 17.2508 0 38.5312 0H372.469C393.749 0 411 18.0199 411 40.2492V281.744C411 303.974 393.749 321.994 372.469 321.994ZM89.9062 46.9574C65.0793 46.9574 44.9531 67.9809 44.9531 93.9148C44.9531 119.849 65.0793 140.872 89.9062 140.872C114.733 140.872 134.859 119.849 134.859 93.9148C134.859 67.9809 114.733 46.9574 89.9062 46.9574ZM51.375 268.328H359.625V174.413L289.374 101.03C285.612 97.1004 279.513 97.1004 275.75 101.03L166.969 214.662L122.405 168.112C118.643 164.182 112.544 164.182 108.782 168.112L51.375 228.079V268.328Z"
-              fill="black"
-            />
-          </svg>
+        <div className="flex-1 rounded-[36px] flex items-center justify-center bg-[#D9D9D9] overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.6604552435147!2d105.7922447100799!3d21.00624368055666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aca5e5f372d1%3A0xed40df3f4ad67d25!2zMTE5IMSQLiBUcuG6p24gRHV5IEjGsG5nLCBUcnVuZyBIb8OgLCBD4bqndSBHaeG6pXksIEjDoCBO4buZaSAxMDAwMDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1754127297604!5m2!1svi!2s"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: "36px" }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </div>
     </section>
