@@ -25,15 +25,31 @@ export function ContactSection() {
         </div>
       </div>
       <div className="w-full mt-6 flex gap-[70px]">
-        <form className="space-y-2 w-2/5 flex flex-col items-center">
-          <p className="text-xl text-center">Contact Address</p>
-          <p className="text-base font-lao-man py-3 text-center">
+        <form className="space-y-2 w-2/5 flex flex-col items-center border-2 border-primary rounded-[27px] p-8 bg-gradient-to-b from-white to-gray-50 shadow-lg">
+          <p className="text-xl text-center font-semibold text-gray-800">
+            Contact Address
+          </p>
+          <p className="text-base font-lao-man py-3 text-center text-gray-600">
             119 Tran Duy Hung, Trung Hoa, Cau Giay, Ha Noi
           </p>
-          <Input placeholder="Your Name" />
-          <Input placeholder="Your Email" type="email" />
-          <Textarea placeholder="Your Message" />
-          <Button type="submit" variant="default" className="h-12 mt-4 mx-auto">
+          <Input
+            placeholder="Your Name"
+            className="border-gray-300 focus:border-primary focus:ring-primary/20"
+          />
+          <Input
+            placeholder="Your Email"
+            type="email"
+            className="border-gray-300 focus:border-primary focus:ring-primary/20"
+          />
+          <Textarea
+            placeholder="Your Message"
+            className="border-gray-300 focus:border-primary focus:ring-primary/20 min-h-[120px]"
+          />
+          <Button
+            type="submit"
+            variant="default"
+            className="h-12 mt-4 mx-auto bg-primary hover:bg-primary/90 text-white font-medium px-8 shadow-md hover:shadow-lg transition-all duration-200"
+          >
             Send Message
           </Button>
         </form>
