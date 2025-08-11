@@ -52,7 +52,7 @@ export function FeaturesSection() {
             <h3 className="text-foreground text-xl h-12 font-semibold leading-tight">
               {feat.title}
             </h3>
-            <p className="text-muted-foreground text-base font-lao-man leading-relaxed">
+            <p className="text-base font-lao-man leading-relaxed">
               {feat.desc}
             </p>
           </Card>

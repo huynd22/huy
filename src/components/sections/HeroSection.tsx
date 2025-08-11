@@ -18,7 +18,7 @@ export function HeroSection() {
         <source src="/videos/bg.mp4" type="video/mp4" />
         Your browser does not support HTML5 video.
       </video>
-      <div className="flex items-end relative justify-between w-full max-w-[1100px] z-10">
+      <div className="flex items-end pt-48 relative justify-between w-full max-w-[1100px] z-10">
         <div className="pb-24">
           <h1 className="text-2xl text-left md:text-[55px] mb-6 leading-[1.1] font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             FACEBOOK <br />
