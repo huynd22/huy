@@ -1,6 +1,12 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import img1 from "@/public/images/hero/4.png";
+import img2 from "@/public/images/hero/5.png";
+import img3 from "@/public/images/hero/6.png";
+import Image from "next/image";
+
+const images = [img1, img2, img3];
 
 export function HeroSection() {
   return (
@@ -59,7 +65,7 @@ export function HeroSection() {
         </Button>
         {/* Social proof row -- use placeholder icons */}
         <div className="flex gap-3 items-center">
-          {new Array(3).fill(null).map((_, index) => (
+          {images.map((image, index) => (
             <div
               key={index}
               className={cn(
@@ -67,18 +73,11 @@ export function HeroSection() {
                 index !== 0 && "-ml-6"
               )}
             >
-              <svg
-                width="25"
-                height="19"
-                viewBox="0 0 25 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22.6562 18.875H2.34375C1.04932 18.875 0 17.8257 0 16.5312V2.46875C0 1.17432 1.04932 0.125 2.34375 0.125H22.6562C23.9507 0.125 25 1.17432 25 2.46875V16.5312C25 17.8257 23.9507 18.875 22.6562 18.875ZM5.46875 2.85938C3.95859 2.85938 2.73438 4.08359 2.73438 5.59375C2.73438 7.10391 3.95859 8.32812 5.46875 8.32812C6.97891 8.32812 8.20312 7.10391 8.20312 5.59375C8.20312 4.08359 6.97891 2.85938 5.46875 2.85938ZM3.125 15.75H21.875V10.2812L17.6018 6.00806C17.373 5.77925 17.002 5.77925 16.7731 6.00806L10.1562 12.625L7.44556 9.91431C7.21675 9.6855 6.84575 9.6855 6.61689 9.91431L3.125 13.4062V15.75Z"
-                  fill="white"
-                />
-              </svg>
+              <Image
+                src={image}
+                alt="Social Proof"
+                className="w-full h-full rounded-full"
+              />
             </div>
           ))}
         </div>
