@@ -21,11 +21,10 @@ export function HeroSection() {
       <div className="flex items-end relative justify-between w-full max-w-[1100px] z-10">
         <div className="pb-24">
           <h1 className="text-2xl text-left md:text-[55px] mb-6 leading-[1.1] font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-            FACEBOOK ADS
+            FACEBOOK <br />
+            <span className="text-accent">ADS ACCOUNT</span>
             <br />
-            <span className="text-accent">ACCOUNT RENTAL</span>
-            <br />
-            SERVICE PROVIDER
+            RENTAL SERVICE PROVIDER
           </h1>
           <p className="mb-8 text-lg text-left font-lao-man text-blue-100 max-w-2xl leading-relaxed">
             We provide high-quality accounts – the key to pushing your <br />
