@@ -3,8 +3,73 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { QRCodeComponent } from "@/components/ui/qr-code";
+import { useState } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export function ContactSection() {
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  const handleInputChange = (field: keyof FormData, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Validate form
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.message.trim()
+    ) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+        alert("Message sent successfully!");
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus("error");
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section
       className="container mx-auto flex flex-col items-center py-24"
@@ -31,7 +96,10 @@ export function ContactSection() {
         </div>
       </div>
       <div className="w-full mt-6 flex gap-[70px]">
-        <form className="space-y-2 w-2/5 flex flex-col items-center border-2 border-primary rounded-[27px] p-8 bg-gradient-to-b from-white to-gray-50 shadow-lg">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-2 w-2/5 flex flex-col items-center border-2 border-primary rounded-[27px] p-8 bg-gradient-to-b from-white to-gray-50 shadow-lg"
+        >
           <p className="text-xl text-center font-semibold text-gray-800">
             Contact Address
           </p>
@@ -40,23 +108,36 @@ export function ContactSection() {
           </p>
           <Input
             placeholder="Your Name"
+            value={formData.name}
+            onChange={(e) => handleInputChange("name", e.target.value)}
             className="border-gray-300 focus:border-primary focus:ring-primary/20"
+            required
+            disabled={isSubmitting}
           />
           <Input
             placeholder="Your Email"
             type="email"
+            value={formData.email}
+            onChange={(e) => handleInputChange("email", e.target.value)}
             className="border-gray-300 focus:border-primary focus:ring-primary/20"
+            required
+            disabled={isSubmitting}
           />
           <Textarea
             placeholder="Your Message"
+            value={formData.message}
+            onChange={(e) => handleInputChange("message", e.target.value)}
             className="border-gray-300 focus:border-primary focus:ring-primary/20 min-h-[120px]"
+            required
+            disabled={isSubmitting}
           />
           <Button
             type="submit"
             variant="default"
-            className="h-12 mt-4 mx-auto bg-primary hover:bg-primary/90 text-white font-medium px-8 shadow-md hover:shadow-lg transition-all duration-200"
+            disabled={isSubmitting}
+            className="h-12 mt-4 mx-auto bg-primary hover:bg-primary/90 text-white font-medium px-8 shadow-md hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </Button>
         </form>
         <div className="flex-1 rounded-[36px] flex items-center justify-center bg-[#D9D9D9] overflow-hidden">

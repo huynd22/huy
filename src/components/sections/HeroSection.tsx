@@ -79,11 +79,15 @@ export function HeroSection() {
               />
             </div>
           ))}
+          <span
+            className={cn(
+              "w-[56px] h-[56px] border-2 border-white/20 bg-primary/70 backdrop-blur-sm rounded-full flex justify-center items-center shadow-lg",
+              "-ml-6"
+            )}
+          >
+            20k+
+          </span>
         </div>
-
-        <span className="text-lg text-blue-100 font-medium">
-          20k+ worldwide customers
-        </span>
       </div>
     </section>
   );
