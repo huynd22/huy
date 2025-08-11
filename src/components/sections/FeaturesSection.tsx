@@ -49,7 +49,7 @@ export function FeaturesSection() {
                 className="filter brightness-0 invert w-8 h-8"
               />
             </div>
-            <h3 className="text-foreground text-xl font-semibold leading-tight mb-3">
+            <h3 className="text-foreground text-xl h-12 font-semibold leading-tight">
               {feat.title}
             </h3>
             <p className="text-muted-foreground text-base font-lao-man leading-relaxed">
