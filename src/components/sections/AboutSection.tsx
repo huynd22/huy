@@ -15,7 +15,7 @@ export function AboutSection() {
                 autoPlay
                 muted
                 loop
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
 
@@ -45,7 +45,7 @@ export function AboutSection() {
               </p>
             </div>
             <div>
-              <div className="flex gap-3 mb-2 justify-between">
+              <div className="flex gap-16 mb-2">
                 <div className="flex gap-6 items-center">
                   <Image src={img4} alt="About" className="w-24 h-auto" />
                   <p className="text-[18px] text-foreground font-medium">
