@@ -52,7 +52,7 @@ export function AchievementsSection() {
                   <div className="text-[50px] font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent drop-shadow-sm">
                     {big}
                   </div>
-                  <div className="text-[18px] text-slate-700 font-lao-man font-medium leading-tight max-w-[200px]">
+                  <div className="text-[18px] text-slate-700 font-lao-man font-medium leading-tight max-w-[300px]">
                     {desc}
                   </div>
                 </div>
