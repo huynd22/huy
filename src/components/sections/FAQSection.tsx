@@ -55,10 +55,10 @@ export function FAQSection() {
           <Accordion type="single" collapsible className="flex-1 space-y-4">
             {faqs.map((q, i) => (
               <AccordionItem key={i} value={q.question} className="border-0">
-                <AccordionTrigger className="card-gradient rounded-xl pl-6 pr-4 py-6 text-left font-semibold text-foreground hover:bg-primary/5 transition-colors duration-200 shadow-md">
+                <AccordionTrigger className="card-gradient rounded-xl font-lao-man pl-6 pr-4 py-6 text-left font-bold text-foreground hover:bg-primary/5 transition-colors duration-200 shadow-md">
                   {q.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pt-4 px-2 leading-relaxed">
+                <AccordionContent className="text-muted-foreground font-lao-man font-medium pt-4 px-2 leading-relaxed">
                   {q.answer}
                 </AccordionContent>
               </AccordionItem>
