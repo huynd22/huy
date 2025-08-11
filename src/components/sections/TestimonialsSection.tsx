@@ -120,9 +120,9 @@ export function TestimonialsSection() {
               <div className="font-lao-man mt-6 text-[16px]">
                 {activeTestimonial.content}
               </div>
-              <p className="text-lg text-[#000000] mt-6">
+              <p className="text-lg text-primary mt-6 italic">
                 {activeTestimonial.name}{" "}
-                <span className="text-[#000000] font-lao-man text-base">
+                <span className="text-primary font-lao-man text-base">
                   {" "}
                   - {activeTestimonial.position}
                 </span>
