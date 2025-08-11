@@ -5,7 +5,13 @@ import img4 from "@/public/images/partners/img-4.png";
 import img5 from "@/public/images/partners/img-5.webp";
 
 import Image from "next/image";
-const partners = [img1, img2, img3, img4, img5];
+const partners = [
+  { img: img1, name: "w-full" },
+  { img: img2, name: "w-full" },
+  { img: img3, name: "w-[94%]" },
+  { img: img4, name: "w-3/5" },
+  { img: img5, name: "w-full" },
+];
 
 export function PartnersSection() {
   return (
@@ -15,12 +21,12 @@ export function PartnersSection() {
         {partners.map((src, i) => (
           <div
             key={i}
-            className="border-[3px] aspect-square border-[#F5F5F5] p-5 rounded-[36px] flex items-center justify-center"
+            className="border-[2px] aspect-square border-gray-200 p-5 rounded-[36px] flex items-center justify-center"
           >
             <Image
-              src={src}
+              src={src.img}
               alt={`Partner ${i + 1}`}
-              className="w-full h-auto"
+              className={`${src.name} h-auto`}
             />
           </div>
         ))}
