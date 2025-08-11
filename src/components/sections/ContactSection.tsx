@@ -1,7 +1,9 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import Image from "next/image";
+import { QRCodeComponent } from "@/components/ui/qr-code";
+
 export function ContactSection() {
   return (
     <section
@@ -14,13 +16,17 @@ export function ContactSection() {
           <div className="text-lg">Whatsapp</div>
           <div className="text-base font-lao-man">+84 947376225</div>
         </div>
-        <div className="flex h-[155px] flex-col justify-center items-center border-2 border-primary rounded-[27px] w-full">
+        <div
+          onClick={() => {
+            window.open("https://t.me/golden_agc68", "_blank");
+          }}
+          className="flex cursor-pointer h-[155px] flex-col justify-center items-center border-2 border-primary rounded-[27px] w-full"
+        >
           <div className="text-lg">Telegram</div>
-          <Image
-            src="/images/qr-code.png"
-            alt="Telegram"
-            width={45}
-            height={45}
+          <QRCodeComponent
+            value="https://t.me/golden_agc68"
+            size={55}
+            className="mt-2"
           />
         </div>
       </div>
