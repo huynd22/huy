@@ -23,7 +23,7 @@ const faqs = [
     question:
       "If an account is locked, will the funds already deposited be lost?",
     answer:
-      "No. Iron Agency will transfer the remaining balance from the old account and offer a new replacement account at no cost if an account is locked. There won't be any extra charges.",
+      "No. Golden Agency will transfer the remaining balance from the old account and offer a new replacement account at no cost if an account is locked. There won't be any extra charges.",
   },
   {
     question: "Are accounts limited to running on certain product types?",
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Can I get a refund if I stop working with you?",
     answer:
-      "Yes. If the customer decides to stop using the account rental service for any reason, Iron Agency will provide them a complete refund of the remaining amount and we will refund within 3 days.",
+      "Yes. If the customer decides to stop using the account rental service for any reason, Golden Agency will provide them a complete refund of the remaining amount and we will refund within 3 days.",
   },
 ];
 
