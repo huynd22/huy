@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-import img1 from "@/public/images/process/img-1.png";
-import img2 from "@/public/images/process/img-2.png";
-import img3 from "@/public/images/process/img-3.png";
-import img4 from "@/public/images/process/img-4.png";
+import img1 from "@/public/images/process/1.png";
+import img2 from "@/public/images/process/2.png";
+import img3 from "@/public/images/process/3.png";
+import img4 from "@/public/images/process/4.png";
 import Image from "next/image";
 const steps = [
   {
