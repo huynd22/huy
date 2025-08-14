@@ -46,7 +46,7 @@ export function HeroSection() {
               contactSection.scrollIntoView({ behavior: "smooth" });
             }
           }}
-          className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 h-14 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+          className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 h-14 text-lg font-medium shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
         >
           Get Started
           <svg
@@ -87,6 +87,9 @@ export function HeroSection() {
           >
             20k+
           </span>
+        </div>
+        <div className="text-sm text-white -ml-2 font-[300]">
+          Trusted by customers worldwide
         </div>
       </div>
     </section>
