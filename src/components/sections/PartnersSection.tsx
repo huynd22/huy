@@ -19,9 +19,9 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 const partners = [
-  { img: img1, name: "w-full" },
-  { img: img2, name: "w-full" },
-  { img: img3, name: "w-[94%]" },
+  { img: img1, name: "w-4/5" },
+  { img: img2, name: "w-4/5" },
+  { img: img3, name: "w-4/5" },
   { img: img4, name: "w-3/5" },
   { img: img5, name: "w-full" },
   { img: img6, name: "w-full" },
