@@ -15,7 +15,7 @@ export function AboutSection() {
                 autoPlay
                 muted
                 loop
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
 
@@ -28,7 +28,7 @@ export function AboutSection() {
               <Image
                 src={img3}
                 alt="About"
-                className="w-full h-1/4 object-cover"
+                className="w-full h-1/4 object-contain"
               />
             </div>
           </div>
