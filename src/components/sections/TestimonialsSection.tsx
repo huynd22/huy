@@ -69,7 +69,8 @@ export function TestimonialsSection() {
     <section className="pt-40 pb-12 bg-white" id="testimonials">
       <div className="container mx-auto">
         <h6 className="text-center text-[30px] mb-5">
-          WHAT CUSTOMERS SAY ABOUT GOLDEN AGENCY ?
+          WHAT CUSTOMERS SAY ABOUT GOLDEN{" "}
+          <span className="font-lao-man">?</span>
         </h6>
         <p className="text-center text-[16px] font-lao-man mb-12">
           Client reviews are the best reflection of Golden Agency&apos;s
