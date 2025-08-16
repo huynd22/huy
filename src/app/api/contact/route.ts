@@ -13,8 +13,13 @@ export async function POST(request: NextRequest) {
     }
 
     // Google Sheets Web App URL - REPLACE WITH YOUR ACTUAL WEB APP URL
+    // To get your script ID:
+    // 1. Go to script.google.com
+    // 2. Create new project with doPost function
+    // 3. Deploy as Web App with "Anyone" access
+    // 4. Copy the script ID from the URL: https://script.google.com/macros/s/SCRIPT_ID_HERE/exec
     const GOOGLE_SHEETS_URL =
-      "https://script.google.com/macros/s/YOUR_ACTUAL_SCRIPT_ID_HERE/exec";
+      "https://script.google.com/macros/s/AKfycbz7lqN5YxvvyB_jhpTAfdECe3jkiOi-m6x80zdy2NstTnvtrBDRleTJSKyZXrCHzfogYw/exec";
 
     // Prepare data for Google Sheets
     const formData = new FormData();
