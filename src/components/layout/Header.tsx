@@ -17,25 +17,25 @@ export function Header() {
       <nav className="hidden sm:flex gap-8 text-base grow-6 sm:justify-center">
         <a
           href="#home"
-          className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+          className="text-black hover:text-primary transition-colors duration-200 font-medium"
         >
           Home Page
         </a>
         <a
           href="#about"
-          className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+          className="text-black hover:text-primary transition-colors duration-200 font-medium"
         >
           About Us
         </a>
         <a
           href="#process"
-          className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+          className="text-black hover:text-primary transition-colors duration-200 font-medium"
         >
           Process
         </a>
         <a
           href="#contact"
-          className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+          className="text-black hover:text-primary transition-colors duration-200 font-medium"
         >
           Contact Us
         </a>
@@ -48,7 +48,7 @@ export function Header() {
             viewBox="0 0 25 25"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="text-muted-foreground"
+            className="text-black"
           >
             <g clip-path="url(#clip0_2012_727)">
               <path

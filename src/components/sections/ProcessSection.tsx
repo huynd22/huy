@@ -69,7 +69,7 @@ export function ProcessSection() {
                   <div className="text-xl font-bold text-foreground mb-2">
                     {step.title}
                   </div>
-                  <div className="text-base font-lao-man text-muted-foreground leading-relaxed">
+                  <div className="text-base font-lao-man text-black leading-relaxed">
                     {step.desc}
                   </div>
                 </div>

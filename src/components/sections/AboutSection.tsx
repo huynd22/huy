@@ -37,7 +37,7 @@ export function AboutSection() {
               <h4 className="text-[30px] mb-6 text-foreground font-bold">
                 ABOUT US
               </h4>
-              <p className="font-lao-man border-l-4 pl-4 border-primary text-[16px] text-muted-foreground">
+              <p className="font-lao-man border-l-4 pl-4 border-primary text-[16px] text-black">
                 GOLDEN AGENCY was born in the context of the advertising
                 industry growing strongly with thousands of competitions, with
                 the desire to provide customers with an optimal solution for
@@ -59,7 +59,7 @@ export function AboutSection() {
                   </p>
                 </div>
               </div>
-              <p className="text-base font-lao-man border-2 mt-8 border-primary p-6 rounded-[9px] text-muted-foreground bg-primary/5">
+              <p className="text-base font-lao-man border-2 mt-8 border-primary p-6 rounded-[9px] text-black bg-primary/5">
                 The above two factors are always put first at GOLDEN AGENCY.
                 Account services are always guaranteed and processed promptly so
                 that customers can use them with peace of mind.
