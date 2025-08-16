@@ -100,10 +100,10 @@ export function ContactSection() {
           onSubmit={handleSubmit}
           className="space-y-2 w-2/5 flex flex-col items-center border-2 border-primary rounded-[27px] p-8 bg-gradient-to-b from-white to-gray-50 shadow-lg"
         >
-          <p className="text-xl text-center font-semibold text-gray-800">
+          <p className="text-xl text-center font-semibold text-black">
             Contact Address
           </p>
-          <p className="text-base font-lao-man py-3 text-center text-gray-600">
+          <p className="text-base font-lao-man py-3 text-center text-black">
             119 Tran Duy Hung, Trung Hoa, Cau Giay, Ha Noi
           </p>
           <Input
