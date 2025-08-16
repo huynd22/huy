@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
     // 3. Deploy as Web App with "Anyone" access
     // 4. Copy the script ID from the URL: https://script.google.com/macros/s/SCRIPT_ID_HERE/exec
     const GOOGLE_SHEETS_URL =
-      "https://script.google.com/macros/s/AKfycbz7lqN5YxvvyB_jhpTAfdECe3jkiOi-m6x80zdy2NstTnvtrBDRleTJSKyZXrCHzfogYw/exec";
+      "https://script.google.com/macros/s/AKfycbyPInAIPAQTfoX0RZ2dNYUuFrBMr-RYIvkGOZan3-MAlT1HRPni21Zrr7y_87YKNoY1gQ/exec";
 
     // Prepare data for Google Sheets
     const formData = new FormData();
