@@ -1,4 +1,9 @@
+"use server";
+
 import { NextRequest, NextResponse } from "next/server";
+
+const googleScriptURL =
+  "https://script.google.com/macros/s/AKfycbx60XP1tT5FbDClyHCOkJqMIjxiDt8Jr1PkxPFH26l3p87gIuV_qD1YeoyVbhzuhMbP/exec";
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,36 +17,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Google Sheets Web App URL - REPLACE WITH YOUR ACTUAL WEB APP URL
-    // To get your script ID:
-    // 1. Go to script.google.com
-    // 2. Create new project with doPost function
-    // 3. Deploy as Web App with "Anyone" access
-    // 4. Copy the script ID from the URL: https://script.google.com/macros/s/SCRIPT_ID_HERE/exec
-    const GOOGLE_SHEETS_URL =
-      "https://script.google.com/macros/s/AKfycbyPInAIPAQTfoX0RZ2dNYUuFrBMr-RYIvkGOZan3-MAlT1HRPni21Zrr7y_87YKNoY1gQ/exec";
-
-    // Prepare data for Google Sheets
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
-    formData.append("timestamp", new Date().toISOString());
-
-    // Send to Google Sheets
-    const response = await fetch(GOOGLE_SHEETS_URL, {
+    const res = await fetch(googleScriptURL, {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        fullName: name,
+        email,
+        message,
+        timestamp: new Date().toISOString(),
+      }),
     });
 
-    if (!response.ok) {
-      console.log("Response status:", response.status);
-      console.log("Response statusText:", response.statusText);
+    if (!res.ok) {
       throw new Error("Failed to submit to Google Sheets");
     }
-
-    const result = await response.text();
-    console.log("Google Sheets response:", result);
 
     return NextResponse.json(
       { message: "Form submitted successfully" },
