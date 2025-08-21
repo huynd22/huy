@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import logo from "@/public/images/logo.jpg";
+import logo from "@/public/images/logo.jpeg";
 import Image from "next/image";
 
 export function Header() {
