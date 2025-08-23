@@ -5,14 +5,14 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="fixed top-0 z-50 inset-x-0 w-full backdrop-blur-xl bg-gradient-to-r from-gray-900/95 via-gray-800/95 to-gray-900/95 border-b border-gradient-to-r from-transparent via-gray-600/30 to-transparent px-4 sm:px-16 py-5 flex items-center justify-between shadow-2xl">
+    <header className="fixed top-0 z-50 inset-x-0 w-full backdrop-blur-xl bg-gradient-to-r from-gray-900/95 via-gray-800/95 to-gray-900/95 border-b border-gradient-to-r from-transparent via-gray-600/30 to-transparent px-4 sm:px-16 py-3 flex items-center justify-between shadow-2xl">
       <div className="flex items-center gap-2 grow-2">
         <div className="flex items-center gap-4 group">
           <div className="relative overflow-hidden rounded-xl ring-2 ring-yellow-400/20 group-hover:ring-yellow-400/40 transition-all duration-300">
             <Image
               src={logo}
               alt="logo"
-              className="w-24 h-auto transform group-hover:scale-105 transition-transform duration-300"
+              className="w-16 h-auto transform group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
